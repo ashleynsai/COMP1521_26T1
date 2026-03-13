@@ -1,0 +1,18 @@
+// A simple program that will read 10 numbers into an array
+
+#define N_SIZE 10
+
+#include <stdio.h>
+
+int main(void) {
+    int i;  // $t0
+    // Whether array is local or global variable
+    // always treat it as global (data section)
+    int numbers[N_SIZE] = {0};
+
+    i = 0;
+    while (i < N_SIZE) {
+        scanf("%d", &numbers[i]);   // SYSCALL 5
+        i++;
+    }
+}
